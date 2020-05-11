@@ -9,19 +9,19 @@ Esta herramienta es solo para fines educativos. El desarrollador no asume ningun
 
 ## Instalación
 1. Clonar el repositorio de **RevShell**.
-   ```console
+   ```bash
    git clone https://github.com/JRIC2002/RevShell
    ```
 2. Entrar a la carpeta **RevShell**.
-   ```console
+   ```bash
    cd RevShell
    ```
 3. Dar permiso de ejecución al archivo.
-   ```console
+   ```bash
    chmod +x RevShell.py
    ```
 4. Ya puedes ejecutar la herramienta **RevShell**.
-   ```console
+   ```bash
    python3 RevShell.py
    ```
 
