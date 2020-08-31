@@ -6,7 +6,6 @@
 #[*] Version: 1.1
 #[*] Author: JRIC2002
 #[*] Date of creation: 10/05/2020
-#[*] Date of last update: 21/08/2020
 
 #Modules
 
@@ -18,26 +17,28 @@ class Color:
     """ Colores en código ANSI. """
 
     #Foreground
-    black = "\033[0;30m"
-    gray = "\033[1;30m"
-    red = "\033[1;31m"
-    green = "\033[1;32m"
-    yellow = "\033[1;33m"
-    blue = "\033[1;34m"
-    magenta = "\033[1;35m"
-    cyan = "\033[1;36m"
-    white = "\033[1;37m"
+    blackColor = "\033[0;30m"
+    grayColor = "\033[1;30m"
+    redColor = "\033[1;31m"
+    greenColor = "\033[1;32m"
+    yellowColor = "\033[1;33m"
+    blueColor = "\033[1;34m"
+    purpleColor = "\033[1;35m"
+    cyanColor = "\033[1;36m"
+    whiteColor = "\033[1;37m"
+    resetColor = "\033[0;0m"
 
     #Background
-    b_black = "\033[0;40m"
-    b_gray = "\033[1;40m"
-    b_red = "\033[1;41m"
-    b_green = "\033[1;42m"
-    b_yellow = "\033[1;43m"
-    b_blue = "\033[1;44m"
-    b_magenta = "\033[1;45m"
-    b_cyan = "\033[1;46m"
-    b_white = "\033[1;47m"
+    blackBackColor = "\033[0;40m"
+    grayBackColor = "\033[1;40m"
+    redBackColor = "\033[1;41m"
+    greenBackColor = "\033[1;42m"
+    yellowBackColor = "\033[1;43m"
+    blueBackColor = "\033[1;44m"
+    purpleBackColor = "\033[1;45m"
+    cyanBackColor = "\033[1;46m"
+    whiteBackColor = "\033[1;47m"
+    resetBackColor = "\033[0;0m"
 
 #Instancia de la clase Color
 color = Color()
@@ -53,40 +54,40 @@ class Start:
         """ Imprime el logo de la herramienta RevShell. """
 
         print("")
-        print("   {}__________              {}_________.__           .__  .__ ".format(color.blue, color.green))
-        print("   {}\______   \ _______  __{}/   _____/|  |__   ____ |  | |  | ".format(color.blue, color.green))
-        print("    {}|       _// __ \  \/ /{}\_____  \ |  |  \_/ __ \|  | |  | ".format(color.blue, color.green))
-        print("    {}|    |   \  ___/\   / {}/        \|   Y  \  ___/|  |_|  |__ ".format(color.blue, color.green))
-        print("    {}|____|_  /\___  >\_/ {}/_______  /|___|  /\___  >____/____/ ".format(color.blue, color.green))
-        print("            {}\/     \/             {}\/      \/     \/ ".format(color.blue, color.green))
-        print("     {}[{}~{}]           {}Tool created by: {}JRIC2002            {}[{}~{}]".format(color.white, color.green, color.white, color.yellow, color.white, color.white, color.green, color.white))
-        print("     {}[{}~{}] {}Description: {}Print the code of a reverse shell {}[{}~{}]".format(color.white, color.green, color.white, color.yellow, color.white, color.white, color.green, color.white))
+        print("   {}__________              {}_________.__           .__  .__ ".format(color.blueColor, color.greenColor))
+        print("   {}\______   \ _______  __{}/   _____/|  |__   ____ |  | |  | ".format(color.blueColor, color.greenColor))
+        print("    {}|       _// __ \  \/ /{}\_____  \ |  |  \_/ __ \|  | |  | ".format(color.blueColor, color.greenColor))
+        print("    {}|    |   \  ___/\   / {}/        \|   Y  \  ___/|  |_|  |__ ".format(color.blueColor, color.greenColor))
+        print("    {}|____|_  /\___  >\_/ {}/_______  /|___|  /\___  >____/____/ ".format(color.blueColor, color.greenColor))
+        print("            {}\/     \/             {}\/      \/     \/ ".format(color.blueColor, color.greenColor))
+        print("     {}[{}~{}]           {}Tool created by: {}JRIC2002            {}[{}~{}]".format(color.whiteColor, color.greenColor, color.whiteColor, color.yellowColor, color.whiteColor, color.whiteColor, color.greenColor, color.whiteColor))
+        print("     {}[{}~{}] {}Description: {}Print the code of a reverse shell {}[{}~{}]".format(color.whiteColor, color.greenColor, color.whiteColor, color.yellowColor, color.whiteColor, color.whiteColor, color.greenColor, color.whiteColor))
         print("     \___________________----^_^----____________________/")
-        print("")
+        print("{}".format(color.resetColor))
 
     def help_menu(self):
         """ Imprime el menú de ayuda de la herramienta RevShell. """
 
-        print("{}Usage: python3 RevShell.py [options]".format(color.white))
+        print("{}Usage: python3 RevShell.py [options]".format(color.whiteColor))
         print("       python3 RevShell.py <IP> <PORT>")
         print("")
         print("Options:")
         print("   -h, --help              Show this help message and exit.")
-        print("   -v, --version           Show program's version number and exit.")
+        print("   -v, --version           Show program's version number and exit.{}".format(color.resetColor))
 
     def version(self):
         """ Imprime la versión de la herramienta RevShell. """
 
-        print("{}#RevShell version 1.1".format(color.white))
+        print("{}#RevShell version 1.1{}".format(color.whiteColor, color.resetColor))
 
     def error(self):
         """ Imprime un mensaje de error. """
 
-        print("{}Usage: python3 RevShell.py [options]".format(color.white))
+        print("{}Usage: python3 RevShell.py [options]".format(color.whiteColor))
         print("       python3 RevShell.py <IP> <PORT>")
         print("")
         print("RevShell.py: Error: Invalid option.")
-        print("Use -h or --help to see the help menu.")
+        print("Use -h or --help to see the help menu.{}".format(color.resetColor))
 
 #Instancia de la clase Start
 start = Start()
@@ -109,10 +110,10 @@ class Functions:
                 else:
                     raise Exception
             except Exception:
-                print("{}Error: Invalid port.{}".format(color.red, color.white))
+                print("{}Error: Invalid port.{}".format(color.redColor, color.whiteColor))
                 sys.exit(1)
         except Exception:
-            print("{}Error: Invalid IP.{}".format(color.red, color.white))
+            print("{}Error: Invalid IP.{}".format(color.redColor, color.resetColor))
             sys.exit(1)
 
     def rev_shell(self, ip, port):
@@ -122,7 +123,9 @@ class Functions:
         b = "More reverse shells"
 
         for code in (a, b):
-            print("{}[{}*{}] ".format(color.white, color.green, color.white) + code)
+            print("{}[{}*{}] ".format(color.whiteColor, color.greenColor, color.whiteColor) + code)
+        print("{}".format(color.resetColor))
+
 #Instancia de la clase Functions
 functions = Functions()
 
@@ -135,7 +138,6 @@ elif len(sys.argv) == 2:
         start.logo()
         start.help_menu()
     elif sys.argv[1] == "-v" or sys.argv[1] == "--version":
-        start.logo()
         start.version()
     else:
         start.logo()
