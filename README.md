@@ -26,6 +26,23 @@ Esta herramienta es solo para fines educativos. El desarrollador no asume ningun
    ```
 
 ## Uso
+**Menú de ayuda**  
+Para ver el menú de ayuda puedes utilizar la opción `-h` o `--help`.
+```bash
+python3 RevShell.py --help
+```
+
+**Versión de la herramienta**  
+Para ver la versión de la herramienta puedes utilizar la opción `-v` o `--version`.
+```bash
+python3 RevShell.py --version
+```
+
+**Código de reverse shells**  
+Para imprimir reverse shells en diferentes lenguajes, puedes pasar a la herramienta como argumentos la dirección IP y el Puerto.
+```bash
+python3 RevShell 127.0.0.1 8080
+```
 
 ## Licencia
 RevShell está hecho con 💚 por JRIC2002. Vea el archivo de **Licencia** para más detalles.
